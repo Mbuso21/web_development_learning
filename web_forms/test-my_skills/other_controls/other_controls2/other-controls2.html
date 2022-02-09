@@ -10,18 +10,58 @@
     <form>
       <ul>
         <li>
-          <label for="food">Pick your favorite food:</label>
+          <label for="food">Pick your favorite food(select box):</label>
+          <select id="food" name="food">
+            <optgroup label="mains">
+              <option>Salad</option> 
+              <option>Curry</option>
+              <option>Pizza</option>
+              <option>Fajitas</option>
+            </optgroup>
+            <optgroup label="snacks">
+              <option> Biscuits</option>
+              <option>Crisps</option>
+              <option>Fruit</option>
+              <option>Breadsticks</option>
+            </optgroup>
+          </select>
+        </li>
 
-              Salad
-              Curry
-              Pizza
-              Fajitas
+        <li>
+          <label for="food">Pick your favorite food(multi-select box):</label>
+          <select id="food" name="food" multiple size="2">
+            <optgroup label="mains">
+              <option>Salad</option> 
+              <option>Curry</option>
+              <option>Pizza</option>
+              <option>Fajitas</option>
+            </optgroup>
+            <optgroup label="snacks">
+              <option> Biscuits</option>
+              <option>Crisps</option>
+              <option>Fruit</option>
+              <option>Breadsticks</option>
+            </optgroup>
+          </select>
+        </li>
 
-              Biscuits
-              Crisps
-              Fruit
-              Breadsticks
-
+        <li>
+          <label for="food">Pick your favorite food(autocomplete):</label>
+          <input type="text" id="food" name="food" list="mySuggestion">
+          <datalist id="mySuggestion">
+            <optgroup label="mains">
+              <option>Salad</option> 
+              <option>Curry</option>
+              <option>Pizza</option>
+              <option>Fajitas</option>
+            </optgroup>
+            <optgroup label="snacks">
+              <option> Biscuits</option>
+              <option>Crisps</option>
+              <option>Fruit</option>
+              <option>Breadsticks</option>
+            </optgroup>
+          </datalist>
         </li>
         <li>
           <button>Submit choice</button>
