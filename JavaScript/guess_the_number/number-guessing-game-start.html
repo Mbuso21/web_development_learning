@@ -5,23 +5,7 @@
 
     <title>Number guessing game</title>
 
-    <style>
-      html {
-        font-family: sans-serif;
-      }
-
-      body {
-        width: 50%;
-        max-width: 800px;
-        min-width: 480px;
-        margin: 0 auto;
-      }
-
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -44,6 +28,9 @@
     <script>
 
         // Your JavaScript goes here
+
+        //To generate a number that is a whole number rounded down
+        //the + 1 makes it so its not 0.
         let randomNumber = Math.floor(Math.random() * 100) + 1;
 
         const guesses = document.querySelector('.guesses')
@@ -57,6 +44,8 @@
         let resetButton;
 
         function checkGuess() {
+
+          // alert('I am a placeholder');
             const userGuess = Number(guessField.value);
             if (guessCount === 1) {
                 guesses.textContent = 'Previous guesses: ';
@@ -87,8 +76,7 @@
             guessField.focus();
         }
 
-
-
+        
     </script>
   </body>
 </html>
