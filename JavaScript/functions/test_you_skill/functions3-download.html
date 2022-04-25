@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Functions: Task 1</title>
+    <title>Functions: Task 3</title>
     <style>
       p {
         color: purple;
@@ -31,16 +31,26 @@
 
     // Add your code here
 
-    function chooseName(){
-      document.body.appendChild(para);
-      const random = Math.floor(Math.random() * names.length);
-      console.log(random);
-      console.log(names[random]);
-      para.textContent = names[random];
+    function random(start, end) {
+        if(end >= names.length) {
+            end = names.length - 1;
+        }
+        if(start >= names.length || start < 0) {
+            start = 0;
+        }
+        console.log(start);
+        console.log(end);
+        console.log(Math.floor(Math.random() * end) + start);
+        return Math.floor(Math.random() * end) + start;
 
     }
-    
-    chooseName();
+    function chooseName(random){
+        console.log(random);
+        document.body.appendChild(para);
+        para.textContent = names[random];
+
+    }
+    chooseName(random(1, 10));
 
     // Don't edit the code below here!
 
